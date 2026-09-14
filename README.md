@@ -1,6 +1,6 @@
 <div align="center">
 
-# EyeInHand
+# Trajectory-Optimized-3D-Reconstruction
 
 **Trajectory design and evaluation for sparse eye-in-hand 3D reconstruction**
 
