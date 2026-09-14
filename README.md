@@ -1,6 +1,6 @@
 <div align="center">
 
-# eyeinhand
+# EyeInHand
 
 **Trajectory design and evaluation for sparse eye-in-hand 3D reconstruction**
 
