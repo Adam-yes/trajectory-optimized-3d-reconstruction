@@ -1,0 +1,8 @@
+{
+  "threshold_m": 0.02,
+  "c2m_cutoff_m": 0.10,
+  "outlier_threshold_m": 0.20,
+  "aucc_min_m": 0.001,
+  "aucc_max_m": 0.10,
+  "aucc_steps": 100
+}

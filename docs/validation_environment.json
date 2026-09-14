@@ -1,0 +1,26 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "Pillow": "12.3.0",
+    "matplotlib": "3.10.8",
+    "pytest": "9.0.2",
+    "pytest-cov": "7.0.0",
+    "trimesh": "4.11.1"
+  },
+  "tests_passed": 93,
+  "tests_skipped": 1,
+  "coverage": {
+    "covered_lines": 856,
+    "num_statements": 979,
+    "percent_covered": 87.43615934627171,
+    "percent_covered_display": "87",
+    "missing_lines": 123,
+    "excluded_lines": 0,
+    "percent_statements_covered": 87.43615934627171,
+    "percent_statements_covered_display": "87"
+  },
+  "gpu_ros_isaac_experiment_executed": false
+}

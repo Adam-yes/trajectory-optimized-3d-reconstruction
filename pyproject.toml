@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eyeinhand"
+version = "0.3.0"
+description = "Trajectory design and evaluation for sparse eye-in-hand reconstruction"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "Pillow>=10"]
+
+[project.optional-dependencies]
+analysis = ["matplotlib>=3.7"]
+geometry = ["open3d>=0.18", "trimesh>=4"]
+inference = ["torch>=2.2", "open3d>=0.18", "trimesh>=4"]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.9"]
+
+[project.scripts]
+eyeinhand = "eyeinhand.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = ["integration: needs locally installed external inference/simulation systems"]
+
+[tool.coverage.run]
+source = ["eyeinhand"]
+omit = ["*/adapters/*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+exclude = ["integrations/ros2"]
+
+[tool.ruff.lint]
+# The codebase deliberately uses compact single-line guards and assignments, so the
+# E7 statement-layout rules are not selected. Import, syntax, name and ordering rules are.
+select = ["E4", "E9", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# matplotlib.use() has to run before pyplot is imported.
+"tools/render_diagrams.py" = ["E402"]
