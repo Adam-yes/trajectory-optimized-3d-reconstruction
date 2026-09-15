@@ -1,8 +1,7 @@
 <div align="center">
 
-# Trajectory-Optimized-3D-Reconstruction
+# Trajectory Design for Sparse Eye-in-Hand Reconstruction under Workcell Constraints
 
-**Trajectory design and evaluation for sparse eye-in-hand 3D reconstruction**
 
 Search an ellipsoidal scan family, keep only what a manipulator can actually execute,
 reconstruct from sparse views, and score the result against known geometry.
